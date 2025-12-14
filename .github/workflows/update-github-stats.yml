@@ -1,0 +1,51 @@
+name: Update GitHub Stats
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Generate GitHub Streak Stats
+        uses: DenverCoder1/github-readme-streak-stats@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          user: xlreon
+          theme: dark
+          hide_border: false
+          background_color: 1e1e2e
+          border_radius: 5
+          locale: en
+
+      - name: Generate Activity Graph
+        uses: Ashutosh00710/github-readme-activity-graph@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          username: xlreon
+          theme: react-dark
+          hide_border: false
+          area: true
+          point_size: 6
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add assets/images/streak-stats.svg assets/images/activity-graph.svg
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "Update GitHub stats [skip ci]"
+            git push
+          fi
