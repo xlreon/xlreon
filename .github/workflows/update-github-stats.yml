@@ -5,6 +5,12 @@ on:
     # Runs every 6 hours
     - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual triggering
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/images/*.svg'
+      - 'output/*.svg'
 
 jobs:
   update-stats:
@@ -16,7 +22,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Generate GitHub Streak Stats
@@ -46,6 +51,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add assets/images/streak-stats.svg assets/images/activity-graph.svg
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Update GitHub stats [skip ci]"
+            git commit -m "Update GitHub stats"
             git push
           fi

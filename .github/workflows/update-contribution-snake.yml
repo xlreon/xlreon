@@ -5,6 +5,12 @@ on:
     # Runs daily at 00:00 UTC
     - cron: '0 0 * * *'
   workflow_dispatch: # Allows manual triggering
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'assets/images/*.svg'
+      - 'output/*.svg'
 
 jobs:
   update-snake:
@@ -32,6 +38,6 @@ jobs:
           git config --local user.name "GitHub Action"
           git add output/github-contribution-grid-snake.svg
           if [ -n "$(git status --porcelain)" ]; then
-            git commit -m "Update contribution snake [skip ci]"
+            git commit -m "Update contribution snake"
             git push
           fi

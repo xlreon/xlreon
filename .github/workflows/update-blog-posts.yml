@@ -5,6 +5,11 @@ on:
     # Runs every 6 hours
     - cron: '0 */6 * * *'
   workflow_dispatch: # Allows manual triggering
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
 
 jobs:
   update-blog-posts:
@@ -27,6 +32,6 @@ jobs:
           feed_list: "" # Add your RSS feed URL here
           max_post_count: 5
           comment_tag_name: "BLOG-POST-LIST"
-          commit_message: "Update blog posts [skip ci]"
+          commit_message: "Update blog posts"
           gh_token: ${{ secrets.GITHUB_TOKEN }}
 
