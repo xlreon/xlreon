@@ -3,35 +3,34 @@ name: Update Blog Posts
 on:
   schedule:
     # Runs every 6 hours
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
   workflow_dispatch: # Allows manual triggering
   push:
     branches:
       - main
     paths-ignore:
-      - 'README.md'
+      - "README.md"
 
 jobs:
   update-blog-posts:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Update blog posts in README
+        continue-on-error: true
         uses: gautamkrishnar/blog-post-workflow@master
         with:
-          # Update with your actual blog RSS feed URL(s) - can be comma-separated
-          # Example: "https://medium.com/feed/@yourusername,https://dev.to/feed/yourusername"
-          feed_list: "" # Add your RSS feed URL here
+          # To enable: Add a repository secret named BLOG_FEED_URL with your RSS feed URL(s)
+          # Example: "https://medium.com/feed/@yourusername"
+          feed_list: ${{ secrets.BLOG_FEED_URL }}
           max_post_count: 5
           comment_tag_name: "BLOG-POST-LIST"
           commit_message: "Update blog posts"
           gh_token: ${{ secrets.GITHUB_TOKEN }}
-

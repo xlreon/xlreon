@@ -3,21 +3,21 @@ name: Update GitHub Stats
 on:
   schedule:
     # Runs every 6 hours
-    - cron: '0 */6 * * *'
+    - cron: "0 */6 * * *"
   workflow_dispatch: # Allows manual triggering
   push:
     branches:
       - main
     paths-ignore:
-      - 'assets/images/*.svg'
-      - 'output/*.svg'
+      - "assets/images/*.svg"
+      - "output/*.svg"
 
 jobs:
   update-stats:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -45,12 +45,24 @@ jobs:
           area: true
           point_size: 6
 
+      - name: Verify files were generated
+        run: |
+          if [ ! -f "assets/images/streak-stats.svg" ]; then
+            echo "⚠️ Warning: streak-stats.svg was not generated"
+          fi
+          if [ ! -f "assets/images/activity-graph.svg" ]; then
+            echo "⚠️ Warning: activity-graph.svg was not generated"
+          fi
+          ls -la assets/images/*.svg || echo "No SVG files found"
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/images/streak-stats.svg assets/images/activity-graph.svg
+          git add assets/images/streak-stats.svg assets/images/activity-graph.svg 2>/dev/null || true
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update GitHub stats"
             git push
+          else
+            echo "No changes to commit"
           fi

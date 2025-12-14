@@ -3,26 +3,25 @@ name: Update LeetCode Stats
 on:
   schedule:
     # Runs daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch: # Allows manual triggering
   push:
     branches:
       - main
     paths-ignore:
-      - 'assets/images/*.svg'
-      - 'output/*.svg'
+      - "assets/images/*.svg"
+      - "output/*.svg"
 
 jobs:
   update-leetcode-stats:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Generate LeetCode Stats
@@ -35,12 +34,27 @@ jobs:
           animation: true
           locale: en
 
+      - name: Verify file was generated
+        run: |
+          if [ ! -f "assets/images/leetcode-stats.svg" ]; then
+            echo "⚠️ Warning: leetcode-stats.svg was not generated"
+            echo "This might be because:"
+            echo "1. LeetCode username 'xlreon' doesn't exist or has no stats"
+            echo "2. The action needs different configuration"
+            echo "3. LeetCode API is unavailable"
+          else
+            echo "✅ leetcode-stats.svg generated successfully"
+          fi
+          ls -la assets/images/leetcode-stats.svg 2>/dev/null || echo "File not found"
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/images/leetcode-stats.svg
+          git add assets/images/leetcode-stats.svg 2>/dev/null || true
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update LeetCode stats"
             git push
+          else
+            echo "No changes to commit"
           fi
