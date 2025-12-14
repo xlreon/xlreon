@@ -34,6 +34,14 @@ jobs:
           animation: true
           locale: en
 
+      - name: List all files after generation
+        run: |
+          echo "=== Current directory structure ==="
+          find . -name "*.svg" -type f | head -20
+          echo ""
+          echo "=== Assets/images directory ==="
+          ls -la assets/images/ || echo "assets/images directory not found"
+
       - name: Verify file was generated
         run: |
           if [ ! -f "assets/images/leetcode-stats.svg" ]; then
@@ -42,10 +50,10 @@ jobs:
             echo "1. LeetCode username 'xlreon' doesn't exist or has no stats"
             echo "2. The action needs different configuration"
             echo "3. LeetCode API is unavailable"
+            echo "4. The action generates files in a different location"
           else
             echo "✅ leetcode-stats.svg generated successfully"
           fi
-          ls -la assets/images/leetcode-stats.svg 2>/dev/null || echo "File not found"
 
       - name: Commit and push changes
         run: |
@@ -56,5 +64,7 @@ jobs:
             git commit -m "Update LeetCode stats"
             git push
           else
-            echo "No changes to commit"
+            echo "No changes to commit - file may not have been generated"
+            echo "This is expected if the LeetCode username doesn't exist or has no stats"
+            exit 1
           fi

@@ -45,24 +45,38 @@ jobs:
           area: true
           point_size: 6
 
+      - name: List all files after generation
+        run: |
+          echo "=== Current directory structure ==="
+          find . -name "*.svg" -type f | head -20
+          echo ""
+          echo "=== Assets/images directory ==="
+          ls -la assets/images/ || echo "assets/images directory not found"
+          echo ""
+          echo "=== All SVG files in repo ==="
+          find . -type f -name "*.svg" 2>/dev/null
+
       - name: Verify files were generated
         run: |
           if [ ! -f "assets/images/streak-stats.svg" ]; then
-            echo "⚠️ Warning: streak-stats.svg was not generated"
+            echo "⚠️ Warning: streak-stats.svg was not generated in expected location"
+            echo "Checking if files were generated elsewhere..."
           fi
           if [ ! -f "assets/images/activity-graph.svg" ]; then
-            echo "⚠️ Warning: activity-graph.svg was not generated"
+            echo "⚠️ Warning: activity-graph.svg was not generated in expected location"
+            echo "Checking if files were generated elsewhere..."
           fi
-          ls -la assets/images/*.svg || echo "No SVG files found"
 
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add assets/images/streak-stats.svg assets/images/activity-graph.svg 2>/dev/null || true
+          # Try to add any SVG files that might have been generated
+          git add assets/images/*.svg 2>/dev/null || true
           if [ -n "$(git status --porcelain)" ]; then
             git commit -m "Update GitHub stats"
             git push
           else
-            echo "No changes to commit"
+            echo "No changes to commit - files may not have been generated"
+            exit 1
           fi
