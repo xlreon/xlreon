@@ -38,7 +38,7 @@ const sidharth = {
 };
 ```
 
-> 💡 *Passionate developer crafting digital experiences and contributing to open source. Always learning, always building.*
+> 💡 _Passionate developer crafting digital experiences and contributing to open source. Always learning, always building._
 
 ## 🌐 Portfolio & Links
 
@@ -124,7 +124,7 @@ const sidharth = {
 
 <div align="center">
   
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=xlreon&theme=tokyonight" alt="GitHub Streak"/>
+  <img src="https://streak-stats.demolab.com/?user=xlreon&theme=tokyonight" alt="GitHub Streak"/>
   
 </div>
 
@@ -171,17 +171,20 @@ const sidharth = {
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xlreon/blind75-js) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/xlreon/blind75-js)
 
 ### 🎨 CSS Battles
-*Creative solutions to CSS Battle challenges*
+
+_Creative solutions to CSS Battle challenges_
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xlreon/cssbattles) [![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/xlreon/cssbattles) [![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/xlreon/cssbattles)
 
 ### 🎮 Quiz Up
-*Interactive quiz application built with modern web technologies*
+
+_Interactive quiz application built with modern web technologies_
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xlreon/quiz_up) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/xlreon/quiz_up)
 
 ### 🎁 100 Days of Polyfill
-*Building JavaScript polyfills from scratch - 100 days challenge*
+
+_Building JavaScript polyfills from scratch - 100 days challenge_
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/xlreon/100DaysOfPolyfill) [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/xlreon/100DaysOfPolyfill)
 
@@ -232,7 +235,7 @@ const sidharth = {
 <!-- BLOG-POST-LIST:START -->
 <!-- BLOG-POST-LIST:END -->
 
-*Coming soon! Stay tuned for technical insights and tutorials.* 📚
+_Coming soon! Stay tuned for technical insights and tutorials._ 📚
 
 </div>
 
