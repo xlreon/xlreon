@@ -124,7 +124,7 @@ const sidharth = {
 
 <div align="center">
   
-  <img src="https://streak-stats.demolab.com/?user=xlreon&theme=tokyonight" alt="GitHub Streak"/>
+  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/streak-stats.svg" alt="GitHub Streak"/>
   
 </div>
 

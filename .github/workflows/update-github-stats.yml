@@ -29,9 +29,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           user: xlreon
-          theme: dark
+          theme: tokyonight
           hide_border: false
-          background_color: 1e1e2e
           border_radius: 5
           locale: en
 
