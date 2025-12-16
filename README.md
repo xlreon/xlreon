@@ -124,7 +124,7 @@ const sidharth = {
 
 <div align="center">
   
-  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/streak-stats.svg" alt="GitHub Streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=xlreon&theme=tokyonight" alt="GitHub Streak"/>
   
 </div>
 
