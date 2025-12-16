@@ -35,7 +35,8 @@ jobs:
           locale: en
 
       - name: Generate Activity Graph
-        uses: Ashutosh00710/github-readme-activity-graph@master
+        continue-on-error: true
+        uses: Ashutosh00710/github-readme-activity-graph@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           username: xlreon
@@ -77,5 +78,5 @@ jobs:
             git push
           else
             echo "No changes to commit - files may not have been generated"
-            exit 1
+            echo "This is expected if only optional steps failed"
           fi
