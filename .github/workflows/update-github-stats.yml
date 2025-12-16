@@ -35,7 +35,7 @@ jobs:
           locale: en
 
       - name: Generate Activity Graph
-        uses: Ashutosh00710/github-readme-activity-graph@main
+        uses: Ashutosh00710/github-readme-activity-graph@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           username: xlreon

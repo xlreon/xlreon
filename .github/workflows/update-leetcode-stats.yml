@@ -25,7 +25,7 @@ jobs:
           fetch-depth: 0
 
       - name: Generate LeetCode Stats
-        uses: jwenjian/leetcode-stats-card@main
+        uses: KnlnKS/leetcode-stats-card@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           username: xlreon
