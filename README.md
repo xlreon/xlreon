@@ -38,7 +38,6 @@ I lean heavily on agentic workflows — orchestrating Claude Code with custom MC
 
 - **AI-native developer tooling** — MCP servers, Claude Code skills, and agentic workflows that cut token cost and accelerate engineering velocity
 - **Lattice** — an AI-native frontend framework with a Rust compiler and a purpose-built language
-- **A legal-tech SaaS** — AI-powered, currently in stealth
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=2" width="100%" alt="" />
 
@@ -48,11 +47,8 @@ The core of my current work — agentic systems built on Anthropic's Claude that
 
 - **Graphify** — a dual knowledge-graph memory engine (AST + semantic) that gives Claude agents persistent codebase recall while cutting token usage by **50–90%**
 - **GitNexus** — an AST-level code-intelligence graph for instant call-graph and blast-radius queries inside agent workflows
-- **[latdoc-linter](https://github.com/xlreon/latdoc-linter)** — a compiled Rust linter for AI-agent context files (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`)
 - **MCP servers & Claude Code skills** — custom Model Context Protocol servers and a growing library of skills and slash-command pipelines that automate multi-step engineering tasks
 - **Agent orchestration** — coordinator / sub-agent patterns that fan out independent work and keep agent context lean
-
-Explore the full toolkit and live demos at **[sidharthsatapathy.com](https://sidharthsatapathy.com)**.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=2" width="100%" alt="" />
 
@@ -64,15 +60,3 @@ Explore the full toolkit and live demos at **[sidharthsatapathy.com](https://sid
 | **Frameworks** | ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) |
 | **Data & Infra** | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white) |
 | **AI & Tooling** | ![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=claude&logoColor=white) ![MCP](https://img.shields.io/badge/Model%20Context%20Protocol-1A1A1A?style=flat-square) ![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white) |
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=2" width="100%" alt="" />
-
-## GitHub Activity
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/streak-stats.svg" alt="GitHub streak" />
-</div>
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/activity-graph.svg" alt="Contribution activity graph" />
-</div>
