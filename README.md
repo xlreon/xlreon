@@ -1,11 +1,13 @@
-<h1 align="center">Sidharth Satapathy</h1>
-
 <p align="center">
-  <em>AI Engineer&nbsp;·&nbsp;Builder&nbsp;·&nbsp;Senior Software Engineer @ IG Group</em>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/hero-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/hero-light.svg" />
+    <img alt="Sidharth Satapathy — AI Engineer · Agentic Systems · Claude / MCP Tooling" src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/hero-dark.svg" width="100%" />
+  </picture>
 </p>
 
 <p align="center">
-  I build AI tooling and agentic systems that make engineering teams <strong>2–5× faster</strong>.
+  Senior Software Engineer @ IG Group&nbsp;·&nbsp;I build AI tooling and agentic systems that make engineering teams <strong>2–5× faster</strong>.
 </p>
 
 <p align="center">
