@@ -68,11 +68,6 @@ Explore the full toolkit and live demos at **[sidharthsatapathy.com](https://sid
 ## GitHub Activity
 
 <div align="center">
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=xlreon&show_icons=true&hide_border=true&include_all_commits=true&theme=github_dark" alt="GitHub stats" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xlreon&layout=compact&hide_border=true&theme=github_dark" alt="Top languages" />
-</div>
-
-<div align="center">
   <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/streak-stats.svg" alt="GitHub streak" />
 </div>
 
