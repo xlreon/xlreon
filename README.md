@@ -40,17 +40,17 @@ I lean heavily on agentic workflows — orchestrating Claude Code with custom MC
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=2" width="100%" alt="" />
 
-## Selected Work
+## Claude Code & Agentic AI
 
-<a href="https://github.com/xlreon/latdoc-linter">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=xlreon&repo=latdoc-linter&theme=github_dark&hide_border=true" alt="latdoc-linter" />
-</a>
+The core of my current work — agentic systems built on Anthropic's Claude that turn the model into a genuine force multiplier for engineering teams.
 
-- **Graphify** — persistent codebase memory for AI agents; a dual knowledge-graph engine that reduces token consumption when reasoning over large repositories
-- **GitNexus** — AST-level code-intelligence graph for instant call-graph and blast-radius queries
-- **Agent orchestration** — an RPG-style visualization layer for multi-agent developer workflows
+- **Graphify** — a dual knowledge-graph memory engine (AST + semantic) that gives Claude agents persistent codebase recall while cutting token usage by **50–90%**
+- **GitNexus** — an AST-level code-intelligence graph for instant call-graph and blast-radius queries inside agent workflows
+- **[latdoc-linter](https://github.com/xlreon/latdoc-linter)** — a compiled Rust linter for AI-agent context files (`CLAUDE.md`, `AGENTS.md`, `.cursorrules`)
+- **MCP servers & Claude Code skills** — custom Model Context Protocol servers and a growing library of skills and slash-command pipelines that automate multi-step engineering tasks
+- **Agent orchestration** — coordinator / sub-agent patterns that fan out independent work and keep agent context lean
 
-More detail and live demos at **[sidharthsatapathy.com](https://sidharthsatapathy.com)**.
+Explore the full toolkit and live demos at **[sidharthsatapathy.com](https://sidharthsatapathy.com)**.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=6,11,20&height=2" width="100%" alt="" />
 
@@ -73,9 +73,9 @@ More detail and live demos at **[sidharthsatapathy.com](https://sidharthsatapath
 </div>
 
 <div align="center">
-  <img src="https://streak-stats.demolab.com/?user=xlreon&theme=github-dark&hide_border=true" alt="GitHub streak" />
+  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/streak-stats.svg" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=xlreon&bg_color=0d1117&color=58a6ff&line=58a6ff&point=ffffff&area=true&hide_border=true" alt="Contribution activity graph" />
+  <img src="https://raw.githubusercontent.com/xlreon/xlreon/main/assets/images/activity-graph.svg" alt="Contribution activity graph" />
 </div>
